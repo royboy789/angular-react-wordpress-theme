@@ -3,10 +3,11 @@ var $ = jQuery;
 
 var Post = React.createClass({
 	render: function(){
+		function post_content(html){ return {__html: html } }
 		return (
 			<article>
 				<h1>{this.props.post.title}</h1>
-				{this.props.post.content}
+				<div dangerouslySetInnerHTML={{__html: this.props.post.content}}></div>
 			</article>
 		)
 	}
@@ -22,14 +23,13 @@ var App = React.createClass({
 			dataType: 'json',
 			method: 'GET',
 			success: function(res){
-				console.log( res );
 				this.setState({data:res})
 			}.bind(this)
 		});	
 	},
 	
 	getInitialState: function() {
-		return { data: [{ title: 'test'}] }
+		return { data: [{ title: 'test', content: '<p>test</p>'}] }
 	},
 	
 	componentDidMount: function() {

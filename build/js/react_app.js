@@ -7,6 +7,10 @@ var $ = jQuery;
 var Post = React.createClass({
   displayName: "Post",
   render: function () {
+    var post_content = function (html) {
+      return { __html: html };
+    };
+
     return React.createElement(
       "article",
       null,
@@ -15,7 +19,7 @@ var Post = React.createClass({
         null,
         this.props.post.title
       ),
-      this.props.post.content
+      React.createElement("div", { dangerouslySetInnerHTML: { __html: this.props.post.content } })
     );
   }
 });
@@ -32,14 +36,13 @@ var App = React.createClass({
       dataType: "json",
       method: "GET",
       success: (function (res) {
-        console.log(res);
         this.setState({ data: res });
       }).bind(this)
     });
   },
 
   getInitialState: function () {
-    return { data: [{ title: "test" }] };
+    return { data: [{ title: "test", content: "<p>test</p>" }] };
   },
 
   componentDidMount: function () {

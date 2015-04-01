@@ -6,7 +6,7 @@
 			Angular
 			<article ng-repeat="post in posts">
 				<h1>{{post.title}}</h1>
-				{{post.content}}
+				<div ng-bind-html="post.content | to_trusted"></div>
 			</article>
 		</div>
 		<div class="col-sm-6">
