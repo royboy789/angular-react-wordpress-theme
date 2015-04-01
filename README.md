@@ -3,4 +3,4 @@ A WordPress theme built with AngularJS as the controller and ReactJS as the view
 Powered by WP-API
   
   
-# Thank you to [Jack Lenox](https://twitter.com/jacklenox)
+__Thank you to [Jack Lenox](https://twitter.com/jacklenox)__ for starting the ReactJS WordPress theme so I have some code to look at.
