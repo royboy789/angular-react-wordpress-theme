@@ -1,4 +1,4 @@
-# AngularJS & ReatcJS WordPress Theme
+# AngularJS & ReactJS WordPress Theme
 A WordPress theme built with AngularJS as the controller and ReactJS as the view layer.  
 Powered by WP-API
   
