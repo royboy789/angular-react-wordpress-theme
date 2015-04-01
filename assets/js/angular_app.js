@@ -7,6 +7,6 @@ reang = angular.module('reang', ['ngResource'])
 })
 .controller( 'reang_controller', ['$rootScope', '$scope', 'Posts', function($rootScope, $scope, Posts){
 	Posts.query({}, function(res){
-		console.log(res);
+		$scope.posts = res;
 	});
-})
+}]);

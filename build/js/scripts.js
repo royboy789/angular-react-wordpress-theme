@@ -1,21 +1,13 @@
 var reang;
-reang = angular.module('reang', ['ngResource']);
-
-reang.factory('Posts', function($resource) {
+reang = angular.module('reang', ['ngResource'])
+.factory('Posts', function($resource) {
 	return $resource(ajaxInfo.json_url + 'posts/:id', {
 		id: '@id'
 	});
-});
-
-
-reang.run(function($rootScope, Posts){
+})
+.controller( 'reang_controller', ['$rootScope', '$scope', 'Posts', function($rootScope, $scope, Posts){
 	Posts.query({}, function(res){
-		console.log(res);
+		$scope.posts = res;
 	});
-})
-
+}]);
 var $ = jQuery;
-
-$(document).ready(function(){
-	console.log('here');
-})

@@ -1,5 +1,5 @@
 body {
-  background: purple;
+  background: white;
 }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
@@ -1406,7 +1406,6 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #fff;
 }
 
 input,

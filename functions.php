@@ -17,6 +17,7 @@ class react_ang_theme {
 			) 
 		);
 		
+		wp_enqueue_script( 'react_app', get_template_directory_uri().'/build/js/react_app.js', array( 'react_ang_main' ), null, true );
 		wp_enqueue_script( 'scripts', get_template_directory_uri().'/build/js/scripts.js', array( 'react_ang_main' ), null, false );
 		
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/build/css/styles.css', array(), null, 'all' );
