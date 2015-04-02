@@ -13,4 +13,4 @@
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> ng-app="reang">
