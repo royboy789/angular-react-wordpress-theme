@@ -32,7 +32,7 @@ var App = React.createClass({
 		return { data: [{ title: 'test', content: '<p>test</p>'}] }
 	},
 	
-	componentDidMount: function() {
+	componentWillMount: function() {
 		this.getposts();
 	},
 	
