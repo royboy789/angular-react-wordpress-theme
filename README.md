@@ -1,6 +1,6 @@
 # AngularJS & ReactJS WordPress Theme
-A WordPress theme built with AngularJS as the controller and ReactJS as the view layer.  
-Powered by WP-API - [DEMO] (http://roysivan.com/react-angularjs-wordpress-theme)
+http://roysivan.com/react-angularjs-wordpress-theme - A WordPress theme built with AngularJS as the controller and ReactJS as the view layer.  
+Powered by WP-API
   
 # Install  
 Make sure you have WordPress already running, along withe the JSON REST API (WP-API) plugin installed and activated  
