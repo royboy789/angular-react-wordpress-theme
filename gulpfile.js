@@ -14,7 +14,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('js', function(){
-	gulp.src(['bower_components/angular/angular.min.js', 'bower_components/angular-resource/angular-resource.min.js'])
+	gulp.src(['node_modules/react/dist/react-with-addons.js', 'bower_components/angular/angular.js', 'bower_components/angular-resource/angular-resource.js'])
 		.pipe(concat('js/react_angular.min.js'))
 		.pipe(gulp.dest('build'));
 	

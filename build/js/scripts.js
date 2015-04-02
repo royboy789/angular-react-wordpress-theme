@@ -14,5 +14,21 @@ reang = angular.module('reang', ['ngResource'])
 	Posts.query({}, function(res){
 		$scope.posts = res;
 	});
-}]);
+}])
+.directive('reactposts', function() {
+	return {
+		restrict: 'E',
+		scope: { data: '=', id: '@' },
+		link: function($scope,elm,attrs) {
+			$scope.$watch('data', function(n,o){
+				if( n && n.length ) {
+					React.render(
+						React.createElement(APP, {data:$scope.data}),
+						elm[0]
+					)
+				}
+			})
+		}
+	}
+});
 var $ = jQuery;

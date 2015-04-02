@@ -16,10 +16,24 @@ var Post = React.createClass({
 
 var App = React.createClass({
 	
-	componentWillReceiveProps: function( nextProps ) {
-		if(nextProps.data){
-			this.state.data = nextProps.data;
-		}	
+	getposts: function() {
+		console.log('getting posts..');
+		$.ajax({
+			url: 'http://dclient.dev/wp-json/posts',
+			dataType: 'json',
+			method: 'GET',
+			success: function(res){
+				this.setState({data:res})
+			}.bind(this)
+		});	
+	},
+	
+	getInitialState: function() {
+		return { data: [{ title: 'test', content: '<p>test</p>'}] }
+	},
+	
+	componentWillMount: function() {
+		this.getposts();
 	},
 	
 	render: function() { 
@@ -37,4 +51,4 @@ var App = React.createClass({
 	}
 });
 
-//React.render(<App/>, document.getElementById( 'test_react' ) );
+React.render(<App/>, document.getElementById( 'test_react' ) );
