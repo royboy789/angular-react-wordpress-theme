@@ -15,7 +15,8 @@ class react_ang_theme {
 			array( 
 				'json_url' => get_bloginfo('wpurl').'/wp-json/',
 				'nonce' => wp_create_nonce( 'wp_json' ),
-				'template_directory' => get_template_directory_uri()
+				'template_directory' => get_template_directory_uri(),
+				'site_url' => get_bloginfo('wpurl')
 			) 
 		);
 		

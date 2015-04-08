@@ -7,10 +7,12 @@ var Post = React.createClass({
 				dangerouslySetInnerHTML: {
 					__html: this.props.content
 				}
-			}), React.createElement("a", {
-				href: '/#/post/' + this.props.ID,
+			}), 
+			React.createElement("a", {
+				href: ajaxInfo.site_url + '/#/post/' + this.props.ID,
 				className: 'btn btn-success'
-			}, 'View Post'), React.createElement("button", {
+			}, 'View Post'),
+			React.createElement("button", {
 				onClick: this.editPost,
 				"data-id": this.props.ID,
 				className: "edit_post btn btn-primary"
