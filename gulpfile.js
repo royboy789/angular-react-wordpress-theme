@@ -14,7 +14,12 @@ gulp.task('sass', function(){
 });
 
 gulp.task('js', function(){
-	gulp.src(['node_modules/react/dist/react-with-addons.js', 'bower_components/angular/angular.js', 'bower_components/angular-resource/angular-resource.js'])
+	gulp.src([
+		'node_modules/react/dist/react-with-addons.js', 
+		'bower_components/angular/angular.js', 
+		'bower_components/angular-resource/angular-resource.js', 
+		'bower_components/angular-ui-router/release/angular-ui-router.js'
+	])
 		.pipe(concat('js/react_angular.min.js'))
 		.pipe(gulp.dest('build'));
 	

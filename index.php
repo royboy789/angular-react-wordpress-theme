@@ -2,8 +2,11 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12" ng-controller="reang_controller">
-			<reactposts data="posts" id="test"></reactposts>
+		<div class="col-sm-12">
+			<h1><a ui-sref="list">Blog</a></h1>
+			<!-- UI VIEW -->
+			<div ui-view></div>
+						
 			<!-- EDIT MODAL -->
 			<div class="modal fade" id="editPost" tabindex="-1" role="dialog" aria-labelledby="editPost" aria-hidden="true" >
 				<div class="modal-dialog">
